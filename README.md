@@ -97,12 +97,3 @@ solvability, no losses — but `auto` beats `fast`'s move count on all 14:
 
 The other six levels time out for everyone — that's a real limit of this approach on
 boards dense enough, not something either heuristic papers over.
-
-## Why it's built this way
-
-`DESIGN.md` walks through the state representation, the move generator, and the search
-engine in more depth than belongs here. `TRADEOFFS.md` is the argument for why these
-three algorithms specifically, including the ones that got measured and rejected —
-bidirectional search, beam search, planning as SAT, a few others. `LEARN.md` is the long
-version of both, written up for interview prep, with the bug this project actually found
-during stress testing and how it got fixed.
