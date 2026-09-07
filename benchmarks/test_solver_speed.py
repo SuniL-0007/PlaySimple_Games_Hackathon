@@ -19,8 +19,6 @@ def test_solver_speed(benchmark, fixture, solver_name):
     solver = SOLVERS[solver_name]
     benchmark.group = fixture.stem
     result = benchmark.pedantic(
-        lambda: solver(level, time.monotonic() + BUDGET_SECONDS),
-        rounds=1,
-        iterations=1,
+        lambda: solver(level, time.monotonic() + BUDGET_SECONDS), rounds=1, iterations=1
     )
     assert result.status in (SOLVED, UNSOLVABLE, TIMEOUT)

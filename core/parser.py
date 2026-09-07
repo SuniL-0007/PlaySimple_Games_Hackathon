@@ -24,7 +24,7 @@ def header_value(lines, key):
     prefix = f"{key}="
     for number, line in enumerate(lines, 1):
         if line.strip().startswith(prefix):
-            value = line.strip()[len(prefix):]
+            value = line.strip()[len(prefix) :]
             if not value.isdigit() or int(value) == 0:
                 raise LevelFormatError(f"line {number}: {key} must be a positive integer, got {value!r}")
             return int(value)
